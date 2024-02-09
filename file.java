@@ -1,3 +1,5 @@
+import java.util.Hashtable;
+
 public class file {
     public static void main(String[] args){
         //----------Variables-----------//
@@ -9,7 +11,7 @@ public class file {
 
         // Floatings
         float numF = 3.2123234f; //Range: 32 bits with 'F' at the end.
-        double numD = 8327.2381;
+        double numD = 8327.2381; //Range: 32 bits
 
         // Char
         char c = 'v';
@@ -17,7 +19,19 @@ public class file {
         //Bool
         boolean ban = true;
 
-        //----------Arrays------------//
-        //import java.util.LinkedList;
+        System.out.print(b);
+        //-----------Arrays-----------//
+        String[] food = {"Bread", "Wheat", "Vine", "Egg", "Carrot"};
+        //Direct selection
+        food[2] = "Onion"; //Vine is replaced by Onion
+        System.out.print(food[1]); //Outputs Wheat
+        System.out.print(food.length); //Outputs 5
+
+
+        //--------Dictionary--------//
+        // You must import the hashtable | import java.util.Hashtable;
+        
+        Hashtable<String, String> months = new Hashtable<String, String>();
+        
     }
 }
