@@ -1,4 +1,5 @@
 import java.util.Hashtable;
+import java.util.Random;
 
 public class file {
     public static void main(String[] args){
@@ -31,7 +32,64 @@ public class file {
         //--------Dictionary--------//
         // You must import the hashtable | import java.util.Hashtable;
         
-        Hashtable<String, String> months = new Hashtable<String, String>();
+        Hashtable<Integer, String> months = new Hashtable<Integer, String>();
+        //Add elements to dictionary
+        months.put(1, "January");
+        months.put(2, "February");
+        months.put(3, "March");
+        months.put(4, "April");
+        months.put(5, "May");
+        months.put(6, "June");
         
+        //--------Conditionals--------//
+        int num =10;
+
+        //if
+        if(num >= 0){
+            System.out.println("Positive number");
+        } 
+        //else if ...
+        else {
+            System.out.println("Negative number");
+        }
+
+        //switch
+        switch (num) {
+            case 10:
+                System.out.println("Number is 10");      
+                break;
+            // Other cases ...
+            default:
+            System.out.println("Default case");
+                break;
+        }
+
+        //Ternary
+        String result = (num % 2 == 0) ? "even" : "odd";
+        System.out.println("The number is a " +result);
+
+        //--------Loops--------//
+        int cont = 1;
+        while (cont <= 4){
+            System.out.println(cont);
+            cont++;
+        }
+
+        for (int i = 0; i<=3; i++){
+            System.out.println(i);
+        }
+
+        
+
+    }
+
+    //--------Functions--------//
+    public static void jump() {
+        System.out.println("Jumping");       
+    }
+
+    public static int getRandomIntBetween(int max, int min) {
+        Random rand = new Random();
+        return rand.nextInt(max-min) + min;
     }
 }
